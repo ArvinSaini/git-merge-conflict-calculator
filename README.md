@@ -7,6 +7,7 @@ The goal of the project is to practise a real Git/GitHub workflow: `init`, `add`
 ## Features
 
 - Basic operations: addition, subtraction, multiplication, division
+- Advanced operations: power (`^`) and modulo (`%`)
 
 ## Usage
 

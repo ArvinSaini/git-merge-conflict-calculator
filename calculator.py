@@ -5,7 +5,7 @@ The project itself is intentionally small; its purpose is to demonstrate a
 Git / GitHub workflow (branching, committing, merging and conflict resolution).
 """
 
-VERSION = "1.0.0"
+VERSION = "1.1.0-advanced-ops"
 
 
 def add(a, b):
@@ -26,11 +26,23 @@ def divide(a, b):
     return a / b
 
 
+def power(a, b):
+    return a ** b
+
+
+def modulo(a, b):
+    if b == 0:
+        return "Error"
+    return a % b
+
+
 OPERATIONS = {
     "+": add,
     "-": subtract,
     "*": multiply,
     "/": divide,
+    "^": power,
+    "%": modulo,
 }
 
 
