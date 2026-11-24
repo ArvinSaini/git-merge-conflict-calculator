@@ -16,6 +16,10 @@ class CalculatorTests(unittest.TestCase):
     def test_divide(self):
         self.assertEqual(divide(8, 2), 4)
 
+    def test_divide_by_zero_raises(self):
+        with self.assertRaises(ZeroDivisionError):
+            divide(5, 0)
+
     def test_calculate_dispatch(self):
         self.assertEqual(calculate(6, "*", 7), 42)
 
