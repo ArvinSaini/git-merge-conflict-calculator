@@ -8,6 +8,7 @@ The goal of the project is to practise a real Git/GitHub workflow: `init`, `add`
 
 - Basic operations: addition, subtraction, multiplication, division
 - Advanced operations: power (`^`) and modulo (`%`)
+- Input validation: clear error messages for bad input and division/modulo by zero
 
 ## Usage
 

@@ -22,6 +22,14 @@ class CalculatorTests(unittest.TestCase):
     def test_modulo(self):
         self.assertEqual(modulo(17, 5), 2)
 
+    def test_divide_by_zero_raises(self):
+        with self.assertRaises(ZeroDivisionError):
+            divide(5, 0)
+
+    def test_modulo_by_zero_raises(self):
+        with self.assertRaises(ZeroDivisionError):
+            modulo(5, 0)
+
     def test_calculate_dispatch(self):
         self.assertEqual(calculate(6, "*", 7), 42)
 

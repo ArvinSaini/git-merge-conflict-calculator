@@ -5,7 +5,7 @@ The project itself is intentionally small; its purpose is to demonstrate a
 Git / GitHub workflow (branching, committing, merging and conflict resolution).
 """
 
-VERSION = "1.1.0-advanced-ops"
+VERSION = "1.2.0"  # combines advanced-ops + input-validation
 
 
 def add(a, b):
@@ -22,7 +22,7 @@ def multiply(a, b):
 
 def divide(a, b):
     if b == 0:
-        return "Error"
+        raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
 
@@ -32,7 +32,7 @@ def power(a, b):
 
 def modulo(a, b):
     if b == 0:
-        return "Error"
+        raise ZeroDivisionError("Cannot take modulo by zero")
     return a % b
 
 
@@ -64,6 +64,8 @@ def main():
         try:
             a, op, b = expr.split()
             print(calculate(float(a), op, float(b)))
+        except ZeroDivisionError as exc:
+            print(f"Math error: {exc}")
         except ValueError as exc:
             print(f"Invalid input ({exc}). Use the form: <number> <operator> <number>")
 
